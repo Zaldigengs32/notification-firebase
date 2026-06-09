@@ -1,0 +1,12 @@
+{
+  "name": "firebaseadmin",
+  "version": "1.0.0",
+  "description": "Firebase Admin SDK untuk kirim push notification",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^14.0.0"
+  }
+}
