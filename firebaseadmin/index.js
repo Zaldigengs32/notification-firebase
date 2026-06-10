@@ -2,14 +2,12 @@ const { initializeApp, cert } = require("firebase-admin/app");
 const { getMessaging } = require("firebase-admin/messaging");
 const serviceAccount = require("./serviceAccountKey.json");
 
-// Inisialisasi Firebase Admin
 initializeApp({
   credential: cert(serviceAccount),
 });
 
-// Token device yang didapat dari React Native app
 const registrationToken =
-  "fXdD-UQNSwCh8enM9QjaSs:APA91bFhaPjl1xilDgFdldVFBxzXtTO1ho--gk63kmtp7FrfSrVztOJN60EhBctkirltmEINfHz7Pc86xm_PiNLLjrLqVCcYHtKM3KwOBWdUlGdG8bMLoMA";
+  "flpH6qjCQAaUnSMZ4vm4Fb:APA91bFzjBACy_Tf1BYHNY9zd7jij4qOPQcUuT9irCendmPQCaQ1lU0STJgCLh-DU6dhXPYvlSeoEItWIrv-3VKwWvwhmUsfoJpskUJGijcAmuw1-S8clgo";
 
 const message = {
   notification: {
@@ -19,7 +17,6 @@ const message = {
   token: registrationToken,
 };
 
-// Kirim pesan
 getMessaging()
   .send(message)
   .then((response) => {
